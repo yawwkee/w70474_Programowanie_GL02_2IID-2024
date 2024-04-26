@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input name="Imię" type="text" minlength="2" id="name">  <span style="color: red;" id="nameError"></span>Podaj swoje imię<br>
+  
+    <input name="Nazwisko" type="text"  minlength="2" id="surname">Podaj swoje Nazwisko<br>
+    <input type="email" name="email" required id="email">email<br>
+    <input type="password" name="hasło" minlength="8" id="hasllo">Podaj swoje hasło<br>
+    <label for="PlecM">Men</label>
+    <input type="radio" id="PlecM" checked value="man"  name="plec"><br> 
+    <label for="PlecK">Kobieta</label>
+    <input type="radio" id="PlecK" value="kobeta" name="plec"><br>
+    <label for="PlecN">Nie wiem</label>
+    <input type="radio" id="PlecN" value="nic" name="plec"><br>
+    <label for="Tele">Podaj numer telefonu</label>
+    <input type="tel" name="tel" minlength="9" maxlength="9" required id="Tele"><br>
+    <label for="birt">Podaj date</label>
+    <input type="date" name="birthdate" id="birt" required><br>
+    <label for="counti">Podaj swój kraj</label>
+    <select name="country" id="counti" required>
+        <option>
+            <option value="Polska">Polska</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="Litwa">Litwa</option>
+            <option value="Niemcy">Niemcy</option>
+        </option>
+    </select><br>
+    <input type="submit" value="Zapisz">
+    <label for="dataUrodzenia">Data urodzenia:</label>
+    <input type="date" id="dataUrodzenia" name="dataUrodzenia" required>
+    <span id="urderror"></span>
+    <div class="error" id="dataUrodzeniaBlad"></div>
+</body>
+<script src="script.js"></script>
+</html>
