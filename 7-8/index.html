@@ -12,6 +12,8 @@
     <input name="Nazwisko" type="text"  minlength="2" id="surname">Podaj swoje Nazwisko<br>
     <input type="email" name="email" required id="email">email<br>
     <input type="password" name="hasło" minlength="8" id="hasllo">Podaj swoje hasło<br>
+    <span id="errorpass"></span>
+    <input type="password" name="PowtorzHaslo" minlength="8" id="powthaslo">Powtorz Haslo<br>
     <label for="PlecM">Men</label>
     <input type="radio" id="PlecM" checked value="man"  name="plec"><br> 
     <label for="PlecK">Kobieta</label>
@@ -31,11 +33,25 @@
             <option value="Niemcy">Niemcy</option>
         </option>
     </select><br>
+    <select name="Wojewodstwo" id="wojewodo" hidden required>
+        <option>
+            <option value="Podkarpackie">Podkarpackie</option>
+            <option value="Mazowieckie">Mazowieckie</option>
+        </option>
+    </select>
+    <input name="Wojewodstwo" type="text"  minlength="20" id="wojewod" >podaj swoje wojewodstwo</label>
+    <input name="Adress" type="text"  minlength="20" id="adress" disabled>Podaj swoj adress<br>
+    <input name="kons" type="checkbox" id="akkas"><label for="akkas">Adres korespondencyjny jest taki sam jak adres zamieszkania</label>
+    <p id="texx2" style="display: none;">podaj swoj Adres korespondencyjny</p>
+    <input name="Adres korespondencyjny" type="text"  minlength="20" id="ak" disabled style="display: none;">
+
     <input type="submit" value="Zapisz">
     <label for="dataUrodzenia">Data urodzenia:</label>
     <input type="date" id="dataUrodzenia" name="dataUrodzenia" required>
     <span id="urderror"></span>
     <div class="error" id="dataUrodzeniaBlad"></div>
+    
+
 </body>
 <script src="script.js"></script>
 </html>

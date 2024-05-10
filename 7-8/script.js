@@ -62,10 +62,57 @@ function sprawdzDateUrodzenia() {
         error.innerHTML = 'masz 18'
      
     } else {
-      error.innerHTML ='dataUrodzenia Musisz mieć co najmniej 18 lat'
+      error.innerHTML ='Musisz mieć co najmniej 18 lat'
     
      
     }}
     dataUrodzenia.addEventListener('input', () => {
     sprawdzDateUrodzenia()
 });
+
+const powtohaslo =  document.getElementById('powthaslo'),
+haslo =  document.getElementById('hasllo'),
+error1 = document.querySelector('#errorpass');
+console.log("3")
+function sprawdz(){
+  console.log(powtohaslo.value)
+  if(powtohaslo.value !== ""){
+    if(powtohaslo.value === haslo.value){
+      error1.innerHTML = 'git'
+    } else {
+      error1.innerHTML ='nie git'
+    }
+  }
+}
+powtohaslo.addEventListener('input', () => {
+  sprawdz()
+});
+
+const chexx = document.getElementById('akkas'),
+kosp = document.getElementById('ak'),
+texxt1 = document.querySelector('#texx2')
+chexx.addEventListener('input', () =>{
+  if(chexx.checked){
+    kosp.style.display = 'block'
+    texxt1.style.display = 'block'
+    kosp.disabled= false
+
+  }else{
+    texxt1.style.display = 'none'
+    kosp.style.display = 'none'
+    kosp.disabled= true
+  }
+})
+const coutty12 = document.getElementById('counti'),
+wojed1 = document.getElementById('wojewodo'),
+wojed2 = document.getElementById('wojewod');
+coutty12.addEventListener('change', () =>{
+  if(coutty12.value === "Polska"){
+    wojed1.hidden = false
+    wojed2.hidden = true
+  }
+  else{
+    wojed1.hidden = true
+    wojed2.hidden = false
+  }
+})
